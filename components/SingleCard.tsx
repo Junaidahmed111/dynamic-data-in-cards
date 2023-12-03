@@ -9,12 +9,20 @@ interface CardProps {
 
 const SingleCard = ({ image, title, description }: CardProps) => {
   return (
-    <div className="flex bg-slate-500 justify-center">
-      <Image src={image} height={60} width={60} alt="image" />
+    <div className="flex p-4">
+      <div className="flex gap-y-4 w-[100%] gap-x-3 shadow-2xl  hover:scale-75 transition-all delay-[450]  bg-red-400 rounded-md">
+        <Image
+          src={image}
+          height={60}
+          width={60}
+          alt="image"
+          className="w-[40%] p-2 rounded-full"
+        />
 
-      <div className="flex flex-col justify-start">
-        <h4>{title}</h4>
-        <p>{description}</p>
+        <div className="flex flex-col w-[50%]  ">
+          <h4 className="font-bold">{title}</h4>
+          <p className="text-start ">{description}</p>
+        </div>
       </div>
     </div>
   );
